@@ -21,7 +21,7 @@ guard let executable = iterator.next() else {
 do {
     if terminal.arguments.contains("-h") || terminal.arguments.contains("--h") || terminal.arguments.contains("help") {
         let helpText = """
-            Swift Thanks is a small tool that allows you to
+            Thanks is a small tool that allows you to
             say thanks (in the form of Github stars) to all
             of the repos that make your project possible.
 
@@ -44,7 +44,7 @@ do {
         let askString = """
         Please create a GitHub OAuth token.
         Head to https://github.com/settings/tokens/new?scopes=repo&description=Swift+Thanks+token
-        to retrieve a token. It will be stored for future use by SwiftThanks.
+        to retrieve a token. It will be stored for future use by Swift Thanks.
         """
         
         let enteredToken = terminal.ask(askString, style: .info, secure: true)
@@ -78,7 +78,7 @@ do {
         let loadingBar = terminal.loadingBar(title: "Thanking Swift Thanks")
         loadingBar.start()
         
-        let pin = ResolvedPackage.Pin(package: "Swift Thanks", repositoryURL: "https://github.com/mcdappdev/swift-thanks.git")
+        let pin = ResolvedPackage.Pin(package: "Swift Thanks", repositoryURL: "https://github.com/mcdappdev/thanks.git")
         
         if try Helpers.star(terminal: terminal, repo: pin) {
             loadingBar.finish()
