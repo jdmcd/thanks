@@ -3,11 +3,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftThanks",
+    name: "Thanks",
     dependencies: [
         .package(url: "https://github.com/vapor/console.git", .upToNextMajor(from: "2.0.0"))
     ],
     targets: [
-        .target(name: "SwiftThanks", dependencies: ["Console"]),
+        .target(name: "Thanks", dependencies: ["Console"]),
     ]
 )
